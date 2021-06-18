@@ -30,8 +30,8 @@ GO := $(or $(shell which go${GO_VERSION}),$(shell which go))
 
 # Docker image configuration
 # Docker images are published to https://quay.io/repository/improbable-eng/etcd-cluster-operator
-DOCKER_TAG ?= ${VERSION}
-DOCKER_REPO ?= quay.io/improbable-eng
+DOCKER_TAG ?= latest
+DOCKER_REPO ?= storageos
 DOCKER_IMAGES ?= controller proxy backup-agent restore-agent
 DOCKER_IMAGE_NAME_PREFIX ?= etcd-cluster-operator-
 # The Docker image for the controller-manager which will be deployed to the cluster in tests
@@ -50,8 +50,8 @@ KIND := ${BIN}/kind-${KIND_VERSION}
 K8S_CLUSTER_NAME := etcd-e2e
 
 # controller-tools
-CONTROLLER_GEN_VERSION := 0.2.5
-CONTROLLER_GEN := ${BIN}/controller-gen-0.2.5
+CONTROLLER_GEN_VERSION := 0.4.0
+CONTROLLER_GEN := ${BIN}/controller-gen-0.4.0
 
 # Kustomize
 KUSTOMIZE_VERSION := 3.5.4
