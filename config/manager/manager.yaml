@@ -22,6 +22,9 @@ spec:
         - --enable-leader-election
         - --proxy-url=eco-proxy.eco-system.svc
         image: controller:latest
+        env:
+        - name: DISABLE_WEBHOOKS
+          value: "true"
         name: manager
         resources:
           limits:

@@ -30,8 +30,8 @@ GO := $(or $(shell which go${GO_VERSION}),$(shell which go))
 
 # Docker image configuration
 # Docker images are published to https://quay.io/repository/improbable-eng/etcd-cluster-operator
-DOCKER_TAG ?= ${VERSION}
-DOCKER_REPO ?= quay.io/improbable-eng
+DOCKER_TAG ?= storageos
+DOCKER_REPO ?= nolancon
 DOCKER_IMAGES ?= controller proxy backup-agent restore-agent
 DOCKER_IMAGE_NAME_PREFIX ?= etcd-cluster-operator-
 # The Docker image for the controller-manager which will be deployed to the cluster in tests

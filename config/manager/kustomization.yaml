@@ -1,2 +1,7 @@
 resources:
 - manager.yaml
+
+images:
+- name: controller
+  newName: nolancon/etcd-cluster-operator-controller
+  newTag: storageos

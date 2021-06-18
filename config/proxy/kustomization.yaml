@@ -1,2 +1,7 @@
 resources:
 - proxy.yaml
+
+images:
+- name: proxy
+  newName: nolancon/etcd-cluster-operator-proxy
+  newTag: storageos
